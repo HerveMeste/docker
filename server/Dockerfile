@@ -1,10 +1,9 @@
-# DockerFile
+# Dockerfile
 FROM node:lts-alpine
 
-WORKDIR /client
+WORKDIR /app
 COPY package*.json ./
 RUN npm i
 COPY src src
-COPY public public
-ENV WDS_SOCKET_PORT 0
+
 CMD npm start
